@@ -9,9 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .foregroundColor(.red)
-            .clipShape((Circle))
+        ZStack {
+            Circle()
+                
+            Text("Hello, world!")
+                .foregroundColor(.orange)
+        }
+            
             
     }
 }
