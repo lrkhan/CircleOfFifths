@@ -12,10 +12,10 @@ enum Role {
 }
 
 class User: Codable {
-    var Name: String
-    var Language: String
-    var appRole: Role
-    var AppProficiencies: [String] = []
+    private var Name: String
+    private var Language: String
+    private var appRole: Role
+    private var AppProficiencies: [String] = []
     
     init(name: String, role: Role) {
         self.Name = name
