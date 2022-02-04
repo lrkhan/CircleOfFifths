@@ -7,24 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6403298D27AC1E490032C57D /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6403298C27AC1E490032C57D /* ButtonView.swift */; };
-		64670F0A27AC30370008FE32 /* EndCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64670F0927AC30370008FE32 /* EndCall.swift */; };
-		64CC586327AC60CC0033BFCE /* ShareScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC586227AC60CC0033BFCE /* ShareScreen.swift */; };
 		989B95EA27AADB6A00179F46 /* TekITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95E927AADB6A00179F46 /* TekITApp.swift */; };
 		989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95EB27AADB6A00179F46 /* ContentView.swift */; };
 		989B95EE27AADB6B00179F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989B95ED27AADB6B00179F46 /* Assets.xcassets */; };
 		989B95F127AADB6B00179F46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989B95F027AADB6B00179F46 /* Preview Assets.xcassets */; };
+		98DA61F227AD688F003E8FCE /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DA61F127AD688F003E8FCE /* CallButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6403298C27AC1E490032C57D /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		64670F0927AC30370008FE32 /* EndCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndCall.swift; sourceTree = "<group>"; };
-		64CC586227AC60CC0033BFCE /* ShareScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScreen.swift; sourceTree = "<group>"; };
 		989B95E627AADB6A00179F46 /* TekIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989B95E927AADB6A00179F46 /* TekITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekITApp.swift; sourceTree = "<group>"; };
 		989B95EB27AADB6A00179F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		989B95ED27AADB6B00179F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		989B95F027AADB6B00179F46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		98DA61F127AD688F003E8FCE /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +55,7 @@
 			children = (
 				989B95E927AADB6A00179F46 /* TekITApp.swift */,
 				989B95EB27AADB6A00179F46 /* ContentView.swift */,
-				6403298C27AC1E490032C57D /* ButtonView.swift */,
-				64670F0927AC30370008FE32 /* EndCall.swift */,
-				64CC586227AC60CC0033BFCE /* ShareScreen.swift */,
+				98DA61F127AD688F003E8FCE /* CallButtonView.swift */,
 				989B95ED27AADB6B00179F46 /* Assets.xcassets */,
 				989B95EF27AADB6B00179F46 /* Preview Content */,
 			);
@@ -148,9 +142,7 @@
 			files = (
 				989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */,
 				989B95EA27AADB6A00179F46 /* TekITApp.swift in Sources */,
-				6403298D27AC1E490032C57D /* ButtonView.swift in Sources */,
-				64CC586327AC60CC0033BFCE /* ShareScreen.swift in Sources */,
-				64670F0A27AC30370008FE32 /* EndCall.swift in Sources */,
+				98DA61F227AD688F003E8FCE /* CallButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
