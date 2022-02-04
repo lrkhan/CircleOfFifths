@@ -12,7 +12,8 @@ struct ContentView: View {
         VStack {
             Text("Hello, world!")
                 .padding()
-            ButtonView()
+            BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Get Help")
+            BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Get Started")
         }
     }
 }
