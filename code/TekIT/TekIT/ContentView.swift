@@ -9,12 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .padding()
-            BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Get Help")
-            BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Get Started")
-        }
+        var isSignedIn = false
+        
+        Text("hello")
     }
 }
 
