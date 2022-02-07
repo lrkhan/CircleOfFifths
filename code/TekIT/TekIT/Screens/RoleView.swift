@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct RoleView: View {
+    @Binding var userRole: Role
+    
     var body: some View {
-        Text("Choose Role")
+        VStack {
+            
+            Button(action:{
+                userRole = .User
+            }) {
+                BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "I Need Help")
+            }
+            
+            Button(action:{
+                userRole = .Volunteer
+            }) {
+                BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Volunteer to Help")
+            }
+            
+        }
     }
 }
 
 struct RoleView_Previews: PreviewProvider {
     static var previews: some View {
-        RoleView()
+        
+        RoleView(userRole: .constant(.User))
     }
 }
