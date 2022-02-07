@@ -22,6 +22,7 @@
 		98AF54F427B164A5005A07AD /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54F327B164A5005A07AD /* CommunityView.swift */; };
 		98AF54F827B16A82005A07AD /* UserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54F727B16A82005A07AD /* UserTabView.swift */; };
 		98AF54FB27B16B01005A07AD /* VolunteerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54FA27B16B01005A07AD /* VolunteerTabView.swift */; };
+		98AF54FD27B18321005A07AD /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54FC27B18321005A07AD /* LaunchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		98AF54F327B164A5005A07AD /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		98AF54F727B16A82005A07AD /* UserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabView.swift; sourceTree = "<group>"; };
 		98AF54FA27B16B01005A07AD /* VolunteerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTabView.swift; sourceTree = "<group>"; };
+		98AF54FC27B18321005A07AD /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		98DA61F127AD688F003E8FCE /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				98AF54EF27B16488005A07AD /* RequestSpecificHelpView.swift */,
 				98AF54F127B16499005A07AD /* ProfileView.swift */,
 				98AF54F327B164A5005A07AD /* CommunityView.swift */,
+				98AF54FC27B18321005A07AD /* LaunchScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98AF54FD27B18321005A07AD /* LaunchScreen.swift in Sources */,
 				989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */,
 				98AF54EC27B16461005A07AD /* SignUpView.swift in Sources */,
 				98AF54F227B16499005A07AD /* ProfileView.swift in Sources */,
