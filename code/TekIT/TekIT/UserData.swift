@@ -11,11 +11,13 @@ enum Role {
     case User, Volunteer
 }
 
-class User: Codable {
+class User {
     private var Name: String
     private var Language: String
     private var appRole: Role
     private var AppProficiencies: [String] = []
+    
+    private var signedInUser = false
     
     init(name: String, role: Role) {
         self.Name = name
@@ -31,4 +33,17 @@ class User: Codable {
         }
     }
     
+    
+    // Functions to change user parameters
+    func signedIn() -> Void {
+        self.signedInUser = true
+    }
+    
+    func changeRole(to userRole: Role) -> Void {
+        self.appRole = userRole
+    }
+    
+    func changeName(to newName: String) -> Void {
+        self.Name = newName
+    }
 }
