@@ -8,7 +8,7 @@
 import Foundation
 
 enum Role {
-    case User, Volunteer
+    case User, Volunteer, none
 }
 
 class User {
