@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    //@State var usr = User(name: [nil,nil], role: .none)
+    @State var usr = User(name: ["",""], role: .none)
     @State var notSignedIn = true
     
     @State private var userRole: Role = .none

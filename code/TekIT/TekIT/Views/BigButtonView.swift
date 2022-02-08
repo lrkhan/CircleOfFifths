@@ -19,7 +19,8 @@ struct BigButtonView: View {
                 .foregroundColor(buttonColor)
                 .frame(width: 325, height: isLargeButton ? 400 : 75)
             Text(buttonText)
-                .font(.system(size: textSize, weight: .bold))
+                //.font(.system(size: textSize, weight: .bold))
+                .font(.largeTitle)
                 .foregroundColor(Color.white)
                 .frame(width: 320, height: 70)
                 .accessibility(label: Text(buttonText))
@@ -33,6 +34,7 @@ struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Get Help")
+                .environment(\.sizeCategory, .extraExtraExtraLarge)
             BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Get Started")
         }
     }
