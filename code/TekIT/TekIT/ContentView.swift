@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var pageSelection = 2
+    //@State var usr = User(name: [nil,nil], role: .none)
     @State var notSignedIn = true
     
     @State private var userRole: Role = .none
@@ -16,9 +16,9 @@ struct ContentView: View {
     var body: some View {
         switch userRole {
         case .User:
-            UserTabView(pageSelection: $pageSelection)
+            UserTabView()
         case .Volunteer:
-            VolunteerTabView(pageSelection: $pageSelection)
+            VolunteerTabView()
         default:
             if notSignedIn {
                 SignUpView(notSignedIn: $notSignedIn, userRole: $userRole)

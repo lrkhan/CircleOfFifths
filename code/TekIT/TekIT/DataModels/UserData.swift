@@ -6,23 +6,28 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Role {
     case User, Volunteer, none
 }
 
+enum Name{
+    case FirstName, LastName, Both
+}
+
 class User {
-    private var Name: String
+    private var userName: [String]
     private var Language: String
-    private var appRole: Role
-    private var AppProficiencies: [String] = []
-    
+    private var userRole: Role
+    private var appProficiencies: [String] = []
+    private var userTextSize: Int = 17
     private var signedInUser = false
     
-    init(name: String, role: Role) {
-        self.Name = name
+    init(name: [String], role: Role) {
+        self.userName = name
         
-        self.appRole = role
+        self.userRole = role
         
         // checks to see if it can grab phone language else uses english
         if let lang = NSLocale.current.languageCode {
@@ -40,10 +45,38 @@ class User {
     }
     
     func changeRole(to userRole: Role) -> Void {
-        self.appRole = userRole
+        self.userRole = userRole
     }
     
-    func changeName(to newName: String) -> Void {
-        self.Name = newName
+    func changeName(First: String, Last: String) -> Void {
+        self.userName = [First, Last]
+    }
+    
+    func changeFontSize(to val: Int){
+        self.userTextSize = val
+    }
+    
+    // Functions to get user paramters
+    func getSignInStatus() -> Bool {
+        return self.signedInUser
+    }
+    
+    func getRole() -> Role{
+        return self.userRole
+    }
+    
+    func getName(_ type: Name) -> String {
+        switch type {
+        case .FirstName:
+            return self.userName[0]
+        case .LastName:
+            return self.userName[1]
+        case .Both:
+            return "\(getName(.FirstName)) \(getName(.LastName))"
+        }
+    }
+    
+    func getTextSize() -> Int {
+        return self.userTextSize
     }
 }
