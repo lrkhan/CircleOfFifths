@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UserTabView: View {
     @Binding var pageSelection: Int
+    private var role: Role = .User
+    
     var body: some View {
         TabView(selection: $pageSelection) {
             CommunityView().tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(1)
