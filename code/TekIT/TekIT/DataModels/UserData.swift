@@ -44,15 +44,15 @@ class User {
         self.signedInUser = true
     }
     
-    func changeRole(to userRole: Role) -> Void {
+    func changeRole(to userRole: Role) {
         self.userRole = userRole
     }
     
-    func changeName(First: String, Last: String) -> Void {
+    func changeName(First: String, Last: String) {
         self.userName = [First, Last]
     }
     
-    func changeFontSize(to val: Int){
+    func changeFontSize(to val: Int) {
         self.userTextSize = val
     }
     
