@@ -11,18 +11,22 @@ struct BigButtonView: View {
     var isLargeButton: Bool
     var buttonColor: Color
     var buttonText: String
-    var textSize: CGFloat = 17
+    
+    // Gets the screen size of the device and changes the size of the buttons
+    let screenSize: CGRect = UIScreen.main.bounds
+    var buttonWidth: CGFloat { screenSize.width * 0.80}
+    var buttonHeightLarge: CGFloat { screenSize.height * 0.50}
+    var buttonHeightSmall: CGFloat { screenSize.height * 0.10}
     
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(buttonColor)
-                .frame(width: 325, height: isLargeButton ? 400 : 75)
+                .frame(width: screenSize.width * 0.80, height: isLargeButton ? buttonHeightLarge : buttonHeightSmall)
             Text(buttonText)
-                //.font(.system(size: textSize, weight: .bold))
                 .font(.largeTitle)
                 .foregroundColor(Color.white)
-                .frame(width: 320, height: 70)
+                .frame(width: buttonWidth-15, height: buttonHeightSmall-10)
                 .accessibility(label: Text(buttonText))
         }
         .padding()
@@ -34,7 +38,6 @@ struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Get Help")
-                .environment(\.sizeCategory, .extraExtraExtraLarge)
             BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Get Started")
         }
     }
@@ -45,9 +48,7 @@ struct ButtonView_Preview_dark: PreviewProvider {
         VStack {
             BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Get Help")
                 .preferredColorScheme(.dark)
-                .padding()
             BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Get Started")
-                .padding()
         }
     }
 }

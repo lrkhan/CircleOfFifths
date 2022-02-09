@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CommunityView: View {
-    let role: Role
+    @EnvironmentObject var appUser:User
     
     var body: some View {
-        switch role {
+        switch appUser.getRole() {
         case .User:
             VStack {
                 Text("Community View")
@@ -33,6 +33,6 @@ struct CommunityView: View {
 
 struct CommunityView_Previews: PreviewProvider {
     static var previews: some View {
-        CommunityView(role: .User)
+        CommunityView()
     }
 }

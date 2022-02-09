@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct ProfileView: View {
-    let role: Role
+    @EnvironmentObject var appUser: User
     
     var body: some View {
-        switch role {
+        switch appUser.getRole() {
         case .User:
             VStack {
-                Text("Community View")
+                Text("Profile View")
                 Text("User Role")
             }
         case .Volunteer:
             VStack {
-                Text("Community View")
+                Text("Profile View")
                 Text("Volunteer Role")
             }
         case .none:
@@ -33,6 +33,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(role: .User)
+        ProfileView()
     }
 }

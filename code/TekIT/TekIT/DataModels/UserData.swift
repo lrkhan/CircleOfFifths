@@ -12,17 +12,16 @@ enum Role {
     case User, Volunteer, none
 }
 
-enum Name{
-    case FirstName, LastName, Both
-}
-
-class User {
-    private var userName: [String]
-    private var Language: String
-    private var userRole: Role
-    private var appProficiencies: [String] = []
-    private var userTextSize: Int = 17
-    private var signedInUser = false
+class User: ObservableObject {
+    @Published var userName: [String?]
+    @Published var Language: String
+    @Published var userRole: Role
+    @Published var appProficiencies: [String] = []
+    @Published var notSignedIn = true
+        
+    enum Name{
+        case FirstName, LastName, Both
+    }
     
     init(name: [String], role: Role) {
         self.userName = name
@@ -32,7 +31,7 @@ class User {
         // checks to see if it can grab phone language else uses english
         if let lang = NSLocale.current.languageCode {
             self.Language = lang
-            print(self.Language)
+            print(self.getName(.Both))
         } else {
             self.Language = "en"
         }
@@ -41,7 +40,7 @@ class User {
     
     // Functions to change user parameters
     func signedIn() -> Void {
-        self.signedInUser = true
+        self.notSignedIn = false
     }
     
     func changeRole(to userRole: Role) {
@@ -52,13 +51,9 @@ class User {
         self.userName = [First, Last]
     }
     
-    func changeFontSize(to val: Int) {
-        self.userTextSize = val
-    }
-    
     // Functions to get user paramters
     func getSignInStatus() -> Bool {
-        return self.signedInUser
+        return self.notSignedIn
     }
     
     func getRole() -> Role{
@@ -66,17 +61,18 @@ class User {
     }
     
     func getName(_ type: Name) -> String {
+        if userName.isEmpty {
+            return "NONE"
+        } else {
         switch type {
         case .FirstName:
-            return self.userName[0]
+            return self.userName[0] ?? "NONE"
         case .LastName:
-            return self.userName[1]
+            return self.userName[1] ?? "NONE"
         case .Both:
             return "\(getName(.FirstName)) \(getName(.LastName))"
         }
+        }
     }
     
-    func getTextSize() -> Int {
-        return self.userTextSize
-    }
 }
