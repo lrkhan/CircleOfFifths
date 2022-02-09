@@ -1,25 +1,23 @@
 //
-//  ProfileView.swift
+//  ProfileUser.swift
 //  TekIT
 //
-//  Created by Luthfor Khan on 2/7/22.
+//  Created by Anood Alshehhi on 2/9/22.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
-    
+struct ProfileUser: View {
     @State private var firstname = ""
     @State private var lastname = ""
     @State private var birthdate = Date()
-    @State private var shouldSendNewsletter = false
-   @State private var devices = 1
-    @State private var prefrences = 1
     @State private var languageIndex = 0
     var language = ["English", "Spanish", "Cantonese", "Arabic", "German", "Russian", "Korean"]
+    @State private var devices = 1
+     @State private var prefrences = 1
 
-  
-
+    
+    
     var body: some View {
         VStack {
             NavigationView {
@@ -36,17 +34,11 @@ struct ProfileView: View {
                         }
                       
                     }
-                
-                    
-                
-                }
-                Section(header: Text("Actions")) {
-                    Toggle("Send Newsletter", isOn: $shouldSendNewsletter)
                 }
                 Section(header: Text("App Information")) {
                     
                     NavigationLink(destination: Devices())  {
-                        Text("Devices")
+                        Text("Device")
                 }
                 
 
@@ -55,9 +47,7 @@ struct ProfileView: View {
                         Text("iphone2").tag(2)
                     }
                     
-                    NavigationLink(destination: AppProficiencies())  {
-                        Text("Proficiencies")
-                }
+              
                     
                     NavigationLink(destination: AppInfo())  {
                         Text("App Info")
@@ -70,16 +60,16 @@ struct ProfileView: View {
                 }
             }
             }
-            .navigationTitle("My Profile")
 
             }
             }
         }
-}
-struct ProfileView_Previews: PreviewProvider {
+    }
+
+                
+
+struct ProfileUser_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileUser()
     }
 }
-
-
