@@ -6,28 +6,32 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Role {
     case User, Volunteer, none
 }
 
-class User {
-    private var Name: String
-    private var Language: String
-    private var appRole: Role
-    private var AppProficiencies: [String] = []
-    
-    private var signedInUser = false
-    
-    init(name: String, role: Role) {
-        self.Name = name
+class User: ObservableObject {
+    @Published var userName: [String?]
+    @Published var Language: String
+    @Published var userRole: Role
+    @Published var appProficiencies: [String] = []
+    @Published var notSignedIn = true
         
-        self.appRole = role
+    enum Name{
+        case FirstName, LastName, Both
+    }
+    
+    init(name: [String], role: Role) {
+        self.userName = name
+        
+        self.userRole = role
         
         // checks to see if it can grab phone language else uses english
         if let lang = NSLocale.current.languageCode {
             self.Language = lang
-            print(self.Language)
+            print(self.getName(.Both))
         } else {
             self.Language = "en"
         }
@@ -36,14 +40,39 @@ class User {
     
     // Functions to change user parameters
     func signedIn() -> Void {
-        self.signedInUser = true
+        self.notSignedIn = false
     }
     
-    func changeRole(to userRole: Role) -> Void {
-        self.appRole = userRole
+    func changeRole(to userRole: Role) {
+        self.userRole = userRole
     }
     
-    func changeName(to newName: String) -> Void {
-        self.Name = newName
+    func changeName(First: String, Last: String) {
+        self.userName = [First, Last]
     }
+    
+    // Functions to get user paramters
+    func getSignInStatus() -> Bool {
+        return self.notSignedIn
+    }
+    
+    func getRole() -> Role{
+        return self.userRole
+    }
+    
+    func getName(_ type: Name) -> String {
+        if userName.isEmpty {
+            return "NONE"
+        } else {
+        switch type {
+        case .FirstName:
+            return self.userName[0] ?? "NONE"
+        case .LastName:
+            return self.userName[1] ?? "NONE"
+        case .Both:
+            return "\(getName(.FirstName)) \(getName(.LastName))"
+        }
+        }
+    }
+    
 }

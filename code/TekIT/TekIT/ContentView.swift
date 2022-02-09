@@ -8,22 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var pageSelection = 2
-    @State var notSignedIn = true
+    @StateObject var appUser = User(name: ["Jane", "Doe"],role: .none)
+    //private var notSignedIn: Bool = true
     
-    @State private var userRole: Role = .none
+    //@State private var userRole: Role = .none
     
     var body: some View {
-        switch userRole {
+        VStack {
+//            if appUser.notSignedIn {
+//                SignUpView()
+//            } else {
+//                UserTabView()
+//            }
+        switch appUser.userRole {
         case .User:
-            UserTabView(pageSelection: $pageSelection)
+            UserTabView()
         case .Volunteer:
-            VolunteerTabView(pageSelection: $pageSelection)
+            UserTabView()
         default:
-            if notSignedIn {
-                SignUpView(notSignedIn: $notSignedIn, userRole: $userRole)
+            if appUser.notSignedIn {
+                SignUpView()
             }
         }
+        }
+        .environmentObject(appUser)
     }
 }
 

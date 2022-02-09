@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct CommunityView: View {
+    @EnvironmentObject var appUser:User
+    
     var body: some View {
-        Text("Community")
+        switch appUser.getRole() {
+        case .User:
+            VStack {
+                Text("Community View")
+                Text("User Role")
+            }
+        case .Volunteer:
+            VStack {
+                Text("Community View")
+                Text("Volunteer Role")
+            }
+        case .none:
+            VStack{
+                Text("An Error has Occured")
+                Text("User role: NONE")
+            }
+        }
     }
 }
 

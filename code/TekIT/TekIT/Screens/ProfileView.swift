@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var appUser: User
+    
     var body: some View {
-        Text("Profile")
+        switch appUser.getRole() {
+        case .User:
+            VStack {
+                Text("Profile View")
+                Text("User Role")
+            }
+        case .Volunteer:
+            VStack {
+                Text("Profile View")
+                Text("Volunteer Role")
+            }
+        case .none:
+            VStack{
+                Text("An Error has Occured")
+                Text("User role: NONE")
+            }
+        }
     }
 }
 

@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @Binding var notSignedIn: Bool
-    @Binding var userRole: Role
-    
+    @EnvironmentObject var appUser:User
     @State private var userRoleTemp: Role = .none
     
     var body: some View {
         if userRoleTemp == .none {
             RoleView(userRole: $userRoleTemp)
-        } else {
+        }else {
             Button(action:{
-                userRole = userRoleTemp
+                appUser.userRole = userRoleTemp
                 
-                notSignedIn.toggle()
+                appUser.notSignedIn.toggle()
             }){
                 Text("sign in")
                 
@@ -31,6 +29,6 @@ struct SignUpView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(notSignedIn: .constant(true), userRole: .constant(.none))
+        SignUpView()
     }
 }
