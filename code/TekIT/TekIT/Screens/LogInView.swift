@@ -3,23 +3,31 @@
 //  TekIT
 //
 //  Created by Luthfor Khan on 2/8/22.
-//
+//  Based on Jerome W. Code
 
 import SwiftUI
 
 struct LogInView: View {
+    @State private var name: String = ""
+    @State private var password: String = ""
     
-    struct ContentView: View {
-        @State private var name: String = ""
-        @State private var password: String = ""
-        let verticalPaddingForForm = 40.0
-        var body: some View {
-            ZStack {
+    // Gets the screen size of the device and changes the size of the buttons
+    let screenSize: CGRect = UIScreen.main.bounds
+    var verticalPadding: CGFloat { screenSize.height * 0.03}
+    var buttonHeightLarge: CGFloat { screenSize.height * 0.50}
+    var buttonHeightSmall: CGFloat { screenSize.height * 0.10}
+    
+    var body: some View {
+        ZStack {
+            VStack() {
+                Spacer()
                 
-                VStack(spacing: CGFloat(verticalPaddingForForm)) {
-                    Text("Welcome To TeckIT")
-                        .font(.title)
-                        .foregroundColor(Color.black)
+                Text("Welcome To TeckIT")
+                    .font(.largeTitle)
+                
+                Spacer()
+                
+                Group {
                     HStack {
                         Image(systemName: "person")
                             .foregroundColor(.secondary)
@@ -41,40 +49,31 @@ struct LogInView: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(10)
-                    
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        Text("Sign Up")
-                            .padding()
-                        
-                    }
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    
-                }.padding(.horizontal, CGFloat(verticalPaddingForForm))
+                }
                 
-                struct ContentView: View {
-                               var body: some View {
-                                   SignInWithAppleButton(.signIn, onRequest: configure, onCompletion:handle)
-                                       .frame(height:45)
-                                       .padding()
-                               }
-                               }
-            }
-        };
-    }
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
+                Button(action: {
+                    print("Name")
+                }) {
+                    Text("Sign Up")
+                        .padding()
+                    
+                }
+                .background(Color.black)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+                
+                Spacer()
+                Spacer()
+                
+            }.padding(.horizontal)
         }
-    }
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
+// Previews
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
         LogInView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
