@@ -13,6 +13,12 @@ struct RoleView: View {
     var body: some View {
         VStack {
             
+            if userRole == .none {
+                Text("Welcome To TeckIT")
+                    .font(.largeTitle)
+                    .padding(.bottom)
+            }
+            
             Button(action:{
                 userRole = .User
             }) {
@@ -31,6 +37,6 @@ struct RoleView: View {
 
 struct RoleView_Previews: PreviewProvider {
     static var previews: some View {
-        RoleView(userRole: .constant(.User))
+        RoleView(userRole: .constant(.none))
     }
 }
