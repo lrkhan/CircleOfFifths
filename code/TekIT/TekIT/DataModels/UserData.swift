@@ -13,6 +13,7 @@ enum Role {
 }
 
 class User: ObservableObject {
+    private var userID = UUID()
     @Published var userName: [String?]
     @Published var Language: String
     @Published var userRole: Role
@@ -38,24 +39,7 @@ class User: ObservableObject {
     }
     
     
-    // Functions to change user parameters
-    func signedIn() -> Void {
-        self.notSignedIn = false
-    }
-    
-    func changeRole(to userRole: Role) {
-        self.userRole = userRole
-    }
-    
-    func changeName(First: String, Last: String) {
-        self.userName = [First, Last]
-    }
-    
-    // Functions to get user paramters
-    func getSignInStatus() -> Bool {
-        return self.notSignedIn
-    }
-    
+    // Functions to change user parameters  
     func getRole() -> Role{
         return self.userRole
     }
