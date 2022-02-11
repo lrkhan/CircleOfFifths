@@ -3,7 +3,7 @@
 //  TekIT
 //
 //  Created by Luthfor Khan on 2/8/22.
-//
+//  Based on Jerome W. Code
 
 import SwiftUI
 
@@ -39,9 +39,9 @@ struct LogInView: View {
                     .cornerRadius(10)
                     
                     HStack {
-                        Image("icons8-key-50")
+                        Image("idcons8-key-50")
                             .resizable()
-                            .frame(width: 16.0, height: 16.0) .foregroundColor(.secondary)
+                            .frame(width: 16.0, height: 16.0)
                         SecureField("Enter password", text: $password)
                             .foregroundColor(Color.black)
                         
@@ -51,16 +51,7 @@ struct LogInView: View {
                     .cornerRadius(10)
                 }
                 
-                Button(action: {
-                    print("Name")
-                }) {
-                    Text("Sign Up")
-                        .padding()
-                    
-                }
-                .background(Color.black)
-                .foregroundColor(Color.white)
-                .cornerRadius(10)
+                AppleIDView()
                 
                 Spacer()
                 Spacer()
@@ -74,6 +65,7 @@ struct LogInView: View {
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
         LogInView()
+            .preferredColorScheme(.dark)
             .previewInterfaceOrientation(.portrait)
     }
 }

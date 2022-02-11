@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct HelpView: View {
+    @EnvironmentObject var appUser: User
+    
     var body: some View {
-        Text("Help")
+        Text("Hello \(appUser.getName(.Both))")
     }
 }
 

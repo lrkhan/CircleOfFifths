@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9805F15327AC317A00DCEBCF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805F15227AC317A00DCEBCF /* UserData.swift */; };
-		9805F15527AC39EB00DCEBCF /* BigButtonViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805F15427AC39EB00DCEBCF /* BigButtonViewExample.swift */; };
 		982A464227B2AA9E00E82F65 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A464127B2AA9E00E82F65 /* LogInView.swift */; };
 		989B95EA27AADB6A00179F46 /* TekITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95E927AADB6A00179F46 /* TekITApp.swift */; };
 		989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95EB27AADB6A00179F46 /* ContentView.swift */; };
@@ -22,12 +21,12 @@
 		98AF54F227B16499005A07AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54F127B16499005A07AD /* ProfileView.swift */; };
 		98AF54F427B164A5005A07AD /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54F327B164A5005A07AD /* CommunityView.swift */; };
 		98AF54F827B16A82005A07AD /* UserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54F727B16A82005A07AD /* UserTabView.swift */; };
-		98AF54FB27B16B01005A07AD /* VolunteerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54FA27B16B01005A07AD /* VolunteerTabView.swift */; };
+		98B2C0B827B699EE00DFEFB3 /* AppleIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B2C0B727B699EE00DFEFB3 /* AppleIDView.swift */; };
+		98B2C0BA27B69A0300DFEFB3 /* ScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B2C0B927B69A0300DFEFB3 /* ScreenData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9805F15227AC317A00DCEBCF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		9805F15427AC39EB00DCEBCF /* BigButtonViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonViewExample.swift; sourceTree = "<group>"; };
 		982A464127B2AA9E00E82F65 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		989B95E627AADB6A00179F46 /* TekIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989B95E927AADB6A00179F46 /* TekITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekITApp.swift; sourceTree = "<group>"; };
@@ -42,7 +41,9 @@
 		98AF54F127B16499005A07AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		98AF54F327B164A5005A07AD /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		98AF54F727B16A82005A07AD /* UserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabView.swift; sourceTree = "<group>"; };
-		98AF54FA27B16B01005A07AD /* VolunteerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTabView.swift; sourceTree = "<group>"; };
+		98B2C0B627B5DEC300DFEFB3 /* TekIT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TekIT.entitlements; sourceTree = "<group>"; };
+		98B2C0B727B699EE00DFEFB3 /* AppleIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIDView.swift; sourceTree = "<group>"; };
+		98B2C0B927B69A0300DFEFB3 /* ScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenData.swift; sourceTree = "<group>"; };
 		98DA61F127AD688F003E8FCE /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +63,7 @@
 			children = (
 				989B95E827AADB6A00179F46 /* TekIT */,
 				989B95E727AADB6A00179F46 /* Products */,
+				98B2C0B527B5140900DFEFB3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,9 +78,9 @@
 		989B95E827AADB6A00179F46 /* TekIT */ = {
 			isa = PBXGroup;
 			children = (
+				98B2C0B627B5DEC300DFEFB3 /* TekIT.entitlements */,
 				989B95E927AADB6A00179F46 /* TekITApp.swift */,
 				989B95EB27AADB6A00179F46 /* ContentView.swift */,
-				98AF54F527B16A52005A07AD /* RoleViews */,
 				98AF54E827B163FF005A07AD /* Screens */,
 				98AF54E727B162CA005A07AD /* Views */,
 				98AF54E627B162C1005A07AD /* DataModels */,
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9805F15227AC317A00DCEBCF /* UserData.swift */,
+				98B2C0B927B69A0300DFEFB3 /* ScreenData.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -107,9 +110,9 @@
 		98AF54E727B162CA005A07AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9805F15427AC39EB00DCEBCF /* BigButtonViewExample.swift */,
 				989B95F727AAEC8D00179F46 /* BigButtonView.swift */,
 				98DA61F127AD688F003E8FCE /* CallButtonView.swift */,
+				98B2C0B727B699EE00DFEFB3 /* AppleIDView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +120,7 @@
 		98AF54E827B163FF005A07AD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				98AF54F727B16A82005A07AD /* UserTabView.swift */,
 				98AF54E927B1644D005A07AD /* RoleView.swift */,
 				98AF54EB27B16461005A07AD /* SignUpView.swift */,
 				98AF54ED27B1646D005A07AD /* HelpView.swift */,
@@ -128,29 +132,11 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		98AF54F527B16A52005A07AD /* RoleViews */ = {
+		98B2C0B527B5140900DFEFB3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				98AF54F927B16AED005A07AD /* Volunteer */,
-				98AF54F627B16A70005A07AD /* User */,
 			);
-			path = RoleViews;
-			sourceTree = "<group>";
-		};
-		98AF54F627B16A70005A07AD /* User */ = {
-			isa = PBXGroup;
-			children = (
-				98AF54F727B16A82005A07AD /* UserTabView.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		98AF54F927B16AED005A07AD /* Volunteer */ = {
-			isa = PBXGroup;
-			children = (
-				98AF54FA27B16B01005A07AD /* VolunteerTabView.swift */,
-			);
-			path = Volunteer;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,13 +212,13 @@
 				989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */,
 				98AF54EC27B16461005A07AD /* SignUpView.swift in Sources */,
 				98AF54F227B16499005A07AD /* ProfileView.swift in Sources */,
+				98B2C0B827B699EE00DFEFB3 /* AppleIDView.swift in Sources */,
 				989B95EA27AADB6A00179F46 /* TekITApp.swift in Sources */,
+				98B2C0BA27B69A0300DFEFB3 /* ScreenData.swift in Sources */,
 				98AF54EA27B1644D005A07AD /* RoleView.swift in Sources */,
 				98AF54F827B16A82005A07AD /* UserTabView.swift in Sources */,
-				98AF54FB27B16B01005A07AD /* VolunteerTabView.swift in Sources */,
 				98AF54F427B164A5005A07AD /* CommunityView.swift in Sources */,
 				982A464227B2AA9E00E82F65 /* LogInView.swift in Sources */,
-				9805F15527AC39EB00DCEBCF /* BigButtonViewExample.swift in Sources */,
 				98AF54EE27B1646D005A07AD /* HelpView.swift in Sources */,
 				9805F15327AC317A00DCEBCF /* UserData.swift in Sources */,
 				98AF54F027B16488005A07AD /* RequestSpecificHelpView.swift in Sources */,
@@ -364,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TekIT/TekIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TekIT/Preview Content\"";
@@ -393,10 +380,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TekIT/TekIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TekIT/Preview Content\"";
-				DEVELOPMENT_TEAM = 3KMYQ4PHN2;
+				DEVELOPMENT_TEAM = TDL4PT97XP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
