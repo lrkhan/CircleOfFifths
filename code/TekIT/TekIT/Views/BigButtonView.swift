@@ -13,20 +13,20 @@ struct BigButtonView: View {
     var buttonText: String
     
     // Gets the screen size of the device and changes the size of the buttons
-    let screenSize: CGRect = UIScreen.main.bounds
-    var buttonWidth: CGFloat { screenSize.width * 0.80}
-    var buttonHeightLarge: CGFloat { screenSize.height * 0.50}
-    var buttonHeightSmall: CGFloat { screenSize.height * 0.10}
+    let userScreen = screenData()
+    var buttonWidth: CGFloat { userScreen.buttonWidth}
+    var buttonLarge: CGFloat { userScreen.buttonHeightLarge }
+    var buttonSmall: CGFloat { userScreen.buttonHeightSmall }
     
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(buttonColor)
-                .frame(width: screenSize.width * 0.80, height: isLargeButton ? buttonHeightLarge : buttonHeightSmall)
+                .frame(width: buttonWidth, height: isLargeButton ? buttonLarge : buttonSmall)
             Text(buttonText)
                 .font(.largeTitle)
                 .foregroundColor(Color.white)
-                .frame(width: buttonWidth-15, height: buttonHeightSmall-10)
+                .frame(width: buttonWidth, height: buttonSmall)
                 .accessibility(label: Text(buttonText))
         }
         .padding()
