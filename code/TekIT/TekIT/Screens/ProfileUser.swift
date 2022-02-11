@@ -42,10 +42,6 @@ struct ProfileUser: View {
                 }
                 
 
-                    Picker(selection: $prefrences, label: Text("Prefrences")) {
-                        Text("iphone1").tag(1)
-                        Text("iphone2").tag(2)
-                    }
                     
               
                     

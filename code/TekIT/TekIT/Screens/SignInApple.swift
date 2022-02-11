@@ -38,7 +38,7 @@ struct SignInApple: View {
                                 //User Info
                                 let email = credential.email
                                 let firstName = credential.fullName?.givenName
-                                let lasttName = credential.fullName?.familyName
+                                let lastName = credential.fullName?.familyName
                                 
                                 self.email = email ?? ""
                                 self.userId = userId
