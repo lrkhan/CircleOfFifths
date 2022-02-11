@@ -15,14 +15,15 @@ struct SignUpView: View {
         if userRoleTemp == .none {
             RoleView(userRole: $userRoleTemp)
         }else {
-            Button(action:{
-                appUser.userRole = userRoleTemp
-                
-                appUser.notSignedIn.toggle()
-            }){
-                Text("sign in")
-                
-            }
+            LogInView()
+//            Button(action:{
+//                appUser.userRole = userRoleTemp
+//
+//                appUser.notSignedIn.toggle()
+//            }){
+//                Text("sign in")
+//
+//            }
         }
     }
 }

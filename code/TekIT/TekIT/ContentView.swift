@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var appUser = User(name: ["Jane", "Doe"],role: .none)
-    //private var notSignedIn: Bool = true
-    
-    //@State private var userRole: Role = .none
     
     var body: some View {
         VStack {
@@ -21,9 +18,7 @@ struct ContentView: View {
 //                UserTabView()
 //            }
         switch appUser.userRole {
-        case .User:
-            UserTabView()
-        case .Volunteer:
+        case .User, .Volunteer:
             UserTabView()
         default:
             if appUser.notSignedIn {

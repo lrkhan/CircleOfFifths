@@ -13,42 +13,37 @@ struct AppleIDView: View {
     
     let userScreen = screenData()
     var buttonWidth: CGFloat { userScreen.buttonWidth }
-    var buttonHeight: CGFloat { userScreen.buttonHeightSmall }
+    var buttonHeight: CGFloat { userScreen.buttonHeightApple }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                SignInWithAppleButton(.continue) { request in
-                    request.requestedScopes = [.email, .fullName]
-                } onCompletion: { result in
-                    switch result{
-                    case .success(let auth):
-                        
-                        switch auth.credential {
-                        case let authCred as ASAuthorizationAppleIDCredential:
-                            //user ID
-                            let userID = authCred.user
-                            
-                            //user Info
-                            let email = authCred.email
-                            let firstName = authCred.fullName?.givenName
-                            let lastName = authCred.fullName?.familyName
-                            break
-                        default:
-                            break
-                        }
-                        
-                        break
-                    case . failure(let error):
-                        print(error)
-                        break
-                    }
+        SignInWithAppleButton(.continue) { request in
+            request.requestedScopes = [.email, .fullName]
+        } onCompletion: { result in
+            switch result{
+            case .success(let auth):
+                
+                switch auth.credential {
+                case let authCred as ASAuthorizationAppleIDCredential:
+                    //user ID
+                    let userID = authCred.user
+                    
+                    //user Info
+                    let email = authCred.email
+                    let firstName = authCred.fullName?.givenName
+                    let lastName = authCred.fullName?.familyName
+                    break
+                default:
+                    break
                 }
-                .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-                .frame(width: buttonWidth, height: buttonHeight)
+                
+                break
+            case . failure(let error):
+                print(error)
+                break
             }
         }
-        .navigationTitle("SignIn")
+        .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+        .frame(width: buttonWidth, height: buttonHeight)
     }
 }
 
