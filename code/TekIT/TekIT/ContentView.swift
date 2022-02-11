@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var appUser = User(name: ["Jane", "Doe"],role: .none)
+    @StateObject var appUser = loadUser()
     
     var body: some View {
         VStack {
