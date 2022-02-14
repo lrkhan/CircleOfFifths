@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AppleIDView: View {
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var appUser: User
     
     let userScreen = screenData()
     var buttonWidth: CGFloat { userScreen.buttonWidth }
@@ -25,12 +26,14 @@ struct AppleIDView: View {
                 switch auth.credential {
                 case let authCred as ASAuthorizationAppleIDCredential:
                     //user ID
-                    let userID = authCred.user
+                    appUser.userID = authCred.user
                     
                     //user Info
-                    let email = authCred.email
+                    appUser.userEmail = authCred.email ?? ""
                     let firstName = authCred.fullName?.givenName
                     let lastName = authCred.fullName?.familyName
+                    
+                    appUser.userName = [firstName, lastName]
                     break
                 default:
                     break

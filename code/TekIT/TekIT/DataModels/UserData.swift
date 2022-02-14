@@ -13,7 +13,7 @@ enum Role: Codable {
 }
 
 class User: ObservableObject, Codable {
-    private var userID: String = UUID().uuidString
+    @Published var userID: String = UUID().uuidString
     @Published var userName: [String?]
     @Published var userEmail: String
     @Published var language: String
