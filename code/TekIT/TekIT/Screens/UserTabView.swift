@@ -9,7 +9,6 @@ import SwiftUI
 
 struct UserTabView: View {
     @State private var pageSelection = 2
-    @EnvironmentObject var appUser: User
     
     var body: some View {
         TabView(selection: $pageSelection) {

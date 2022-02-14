@@ -13,7 +13,7 @@ enum Role: Codable {
 }
 
 class User: ObservableObject, Codable {
-    @Published var userID: String = UUID().uuidString
+    private var userID: String = UUID().uuidString
     @Published var userName: [String?]
     @Published var userEmail: String
     @Published var language: String
@@ -87,6 +87,10 @@ class User: ObservableObject, Codable {
         self.appProficiencies = try container.decode([String].self, forKey: .appProficiencies)
         self.notSignedIn = try container.decode(Bool.self, forKey: .notSignedIn)
     }
+    
+    func changeID(to userID: String) {
+        self.userID = userID
+    }
 }
 
 func loadUser() -> User {
@@ -107,14 +111,14 @@ func loadUser() -> User {
 
 func saveUser(_ user: User) {
     do {
-            let fileURL = try FileManager.default
-                .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-                .appendingPathComponent("userData.json")
-            
-            try JSONEncoder()
+        let fileURL = try FileManager.default
+            .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            .appendingPathComponent("userData.json")
+        
+        try JSONEncoder()
             .encode(user)
-                .write(to: fileURL)
-        } catch {
-            print("error writing user data")
-        }
+            .write(to: fileURL)
+    } catch {
+        print("error writing user data")
+    }
 }

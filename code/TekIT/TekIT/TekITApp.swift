@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TekITApp: App {
+    @StateObject var appUser: User = loadUser()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appUser)
         }
     }
 }

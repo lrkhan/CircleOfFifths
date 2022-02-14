@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var appUser = loadUser()
+    @EnvironmentObject var appUser: User
     
     var body: some View {
         VStack {            
@@ -21,7 +21,6 @@ struct ContentView: View {
                 }
             }
         }
-        .environmentObject(appUser)
     }
 }
 

@@ -11,17 +11,11 @@ struct CommunityView: View {
     @EnvironmentObject var appUser:User
     
     var body: some View {
-        switch appUser.getRole() {
+        switch appUser.userRole {
         case .User:
-            VStack {
-                Text("Community View")
-                Text("User Role")
-            }
+            CommunityUserView()
         case .Volunteer:
-            VStack {
-                Text("Community View")
-                Text("Volunteer Role")
-            }
+            CommunityVolunteerView()
         case .none:
             VStack{
                 Text("An Error has Occured")

@@ -26,7 +26,7 @@ struct AppleIDView: View {
                 switch auth.credential {
                 case let authCred as ASAuthorizationAppleIDCredential:
                     //user ID
-                    appUser.userID = authCred.user
+                    appUser.changeID(to: authCred.user)
                     
                     //user Info
                     appUser.userEmail = authCred.email ?? ""
