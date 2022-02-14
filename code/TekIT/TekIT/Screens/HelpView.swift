@@ -9,7 +9,64 @@ import SwiftUI
 
 struct HelpView: View {
     var body: some View {
-        Text("Volunteer Help")
+        VStack{
+            Text("Hello Jorge").fontWeight(.medium)
+                .font(.largeTitle)
+        ZStack{
+        
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 350, height: 175)
+                .foregroundColor(.gray)
+                
+            VStack{
+            Image(systemName: "globe.americas")
+                .font(.system(size: 100))
+                .foregroundColor(.white)
+                .padding()
+            Text("Helping since")
+                .foregroundColor(.white)
+                .font(.subheadline)
+            }
+        }.padding()
+            Button( action: {
+                print("How to answer a call")
+            })  {
+                Text("How to answer a call").fontWeight(.bold)
+                    .frame(width: 320, height: 50)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .font(.title2)
+                    .cornerRadius(10)
+            }.padding()
+        
+            HStack{
+                
+            ZStack{
+            RoundedRectangle(cornerRadius: 10, style: .circular)
+                .frame(width: 165, height: 165, alignment: .topLeading)
+                .foregroundColor(.green)
+                
+                Text("Users helped \n                                 5").fontWeight(.bold)
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .frame(width: 125, height: 125)
+                
+            }
+            .padding(5)
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10, style: .circular)
+                        .frame(width: 165, height: 165, alignment: .topLeading)
+                        .foregroundColor(.green)
+                        
+                    Text("Time Volunteered \n              1hr 30min").fontWeight(.bold)
+                        .font(.title2)
+                            .foregroundColor(.white)
+                            .frame(width: 125, height: 125)
+                    }
+                .padding(5)
+            }
+        }
     }
 }
 
