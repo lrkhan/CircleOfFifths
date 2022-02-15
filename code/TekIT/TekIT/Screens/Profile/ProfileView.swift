@@ -22,7 +22,15 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             NavigationView {
+                VStack{
+                
                 Form {
+                    
+                    if appUser.notSignedIn {
+                        Section(header: Text("Log In")) {
+                            AppleIDView()
+                        }
+                    }
                     
                     Section(header: Text("Personal Information")) {
                         
@@ -34,7 +42,7 @@ struct ProfileView: View {
                             Text("Pronouns")
                         }
                         
-                        Picker(selection: $languageIndex, label: Text("Language")) {
+                        Picker(selection: $languageIndex, label: Text("Prefered Language")) {
                             ForEach(language,id: \.self) {
                                 Text("\($0)")
                             }
@@ -61,6 +69,7 @@ struct ProfileView: View {
 //                            Text("Contact Us")
 //                        }
                     }
+                }
                 }
                 .navigationTitle("My Profile")
                 

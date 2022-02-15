@@ -27,7 +27,7 @@ struct HelpUserView: View {
             Button(action:{
                 
             }){
-                BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Request Specifc Help")
+                BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Select App")
             }
         }
     }
