@@ -174,9 +174,9 @@
 			children = (
 				986F2FEA27BABADE009A730C /* Community */,
 				986F2FE527BABA8D009A730C /* Help */,
-				986F2FF027BABB68009A730C /* SignUp */,
 				986F2FEF27BABB4D009A730C /* Profile */,
 				98AF54EF27B16488005A07AD /* RequestSpecificHelpView.swift */,
+				986F2FF027BABB68009A730C /* SignUp */,
 				98AF54F727B16A82005A07AD /* UserTabView.swift */,
 			);
 			path = Screens;

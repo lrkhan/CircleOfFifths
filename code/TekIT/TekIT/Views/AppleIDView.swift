@@ -12,9 +12,7 @@ struct AppleIDView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appUser: User
     
-    let userScreen = screenData()
-    var buttonWidth: CGFloat { userScreen.buttonWidth }
-    var buttonHeight: CGFloat { userScreen.buttonHeightApple }
+    var buttonHeight: CGFloat { screenData().buttonHeightApple }
     
     var body: some View {
         SignInWithAppleButton(.continue) { request in
@@ -46,7 +44,8 @@ struct AppleIDView: View {
             }
         }
         .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-        .frame(width: buttonWidth, height: buttonHeight)
+        .frame(height: buttonHeight)
+        .padding()
     }
 }
 

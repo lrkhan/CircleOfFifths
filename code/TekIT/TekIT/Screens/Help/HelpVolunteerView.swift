@@ -10,9 +10,14 @@ import SwiftUI
 struct HelpVolunteerView: View {
     @EnvironmentObject var appUser: User
     
+    private var welcomeMessage: String {
+        "Hello" + (appUser.getName(.FirstName).isEmpty ? "": " \(appUser.getName(.FirstName))")
+    }
+    
     var body: some View {
         VStack{
-            Text("Hello \(appUser.getName(.FirstName))").fontWeight(.medium)
+            Text(welcomeMessage)
+                .fontWeight(.medium)
                 .font(.largeTitle)
         ZStack{
         

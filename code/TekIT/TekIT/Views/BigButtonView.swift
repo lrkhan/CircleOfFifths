@@ -22,14 +22,15 @@ struct BigButtonView: View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(buttonColor)
-                .frame(width: buttonWidth, height: isLargeButton ? buttonLarge : buttonSmall)
+                .frame(height: isLargeButton ? buttonLarge : buttonSmall)
+                .padding()
             Text(buttonText)
                 .font(.largeTitle)
                 .foregroundColor(Color.white)
                 .frame(width: buttonWidth, height: buttonSmall)
                 .accessibility(label: Text(buttonText))
         }
-        .padding()
+        //.padding()
     }
 }
 

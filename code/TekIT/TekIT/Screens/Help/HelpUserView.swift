@@ -10,8 +10,26 @@ import SwiftUI
 struct HelpUserView: View {
     @EnvironmentObject var appUser: User
     
+    private var welcomeMessage: String {
+        "Hello" + (appUser.getName(.FirstName).isEmpty ? "": " \(appUser.getName(.FirstName))")
+    }
+    
     var body: some View {
-        Text("Hello, \(appUser.getName(.FirstName))")
+        VStack{
+            Text(welcomeMessage)
+                .fontWeight(.medium)
+                .font(.largeTitle)
+            Button(action:{
+                
+            }){
+                BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Call for Help")
+            }
+            Button(action:{
+                
+            }){
+                BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Request Specifc Help")
+            }
+        }
     }
 }
 

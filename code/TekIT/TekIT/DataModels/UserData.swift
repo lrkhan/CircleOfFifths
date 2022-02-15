@@ -51,13 +51,13 @@ class User: ObservableObject, Codable {
     
     func getName(_ type: Name) -> String {
         if userName.isEmpty {
-            return "NONE"
+            return ""
         } else {
             switch type {
             case .FirstName:
-                return self.userName[0] ?? "NONE"
+                return self.userName[0] ?? ""
             case .LastName:
-                return self.userName[1] ?? "NONE"
+                return self.userName[1] ?? ""
             case .Both:
                 return "\(getName(.FirstName)) \(getName(.LastName))"
             }
