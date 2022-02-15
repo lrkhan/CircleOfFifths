@@ -29,6 +29,7 @@
 		98B2C0BA27B69A0300DFEFB3 /* ScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B2C0B927B69A0300DFEFB3 /* ScreenData.swift */; };
 		98DDA99127BB6020000F47C2 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDA99027BB6020000F47C2 /* NameView.swift */; };
 		98DDA99327BB6D8E000F47C2 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDA99227BB6D8E000F47C2 /* StatView.swift */; };
+		98DDA99627BC0C2C000F47C2 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDA99527BC0C2C000F47C2 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		98DDA99027BB6020000F47C2 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		98DDA99227BB6D8E000F47C2 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 		98DDA99427BBFC85000F47C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		98DDA99527BC0C2C000F47C2 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				98AF54ED27B1646D005A07AD /* HelpView.swift */,
 				986F2FE127BAB992009A730C /* HelpVolunteerView.swift */,
 				986F2FE327BABA54009A730C /* HelpUserView.swift */,
+				98DDA99527BC0C2C000F47C2 /* test.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				98AF54EA27B1644D005A07AD /* RoleView.swift in Sources */,
 				98AF54F827B16A82005A07AD /* UserTabView.swift in Sources */,
 				986F2FE227BAB992009A730C /* HelpVolunteerView.swift in Sources */,
+				98DDA99627BC0C2C000F47C2 /* test.swift in Sources */,
 				98AF54F427B164A5005A07AD /* CommunityView.swift in Sources */,
 				982A464227B2AA9E00E82F65 /* LogInView.swift in Sources */,
 				98AF54EE27B1646D005A07AD /* HelpView.swift in Sources */,
