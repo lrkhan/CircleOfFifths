@@ -17,7 +17,7 @@ struct RoleView: View {
         VStack {
             
             if userRole == .none {
-                Text("Welcome To TeckIT")
+                Text("Welcome To TekIT")
                     .font(.largeTitle)
                     .padding(.bottom)
             }
