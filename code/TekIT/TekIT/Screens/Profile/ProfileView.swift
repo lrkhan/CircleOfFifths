@@ -21,7 +21,14 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
+            
             NavigationView {
+                VStack {
+                    
+                    if appUser.notSignedIn {
+                        AppleIDView()
+                    }
+                    
                 Form {
                     
                     Section(header: Text("Personal Information")) {
@@ -71,6 +78,7 @@ struct ProfileView: View {
 //                            Text("Contact Us")
 //                        }
                     }
+                }
                 }
                 .navigationTitle("My Profile")
                 
