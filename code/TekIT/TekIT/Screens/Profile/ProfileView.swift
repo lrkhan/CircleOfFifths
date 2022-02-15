@@ -51,25 +51,15 @@ struct ProfileView: View {
                         Toggle("Send Newsletter", isOn: $shouldSendNewsletter)
                     }
                     Section(header: Text("App Information")) {
-                        
-//                        NavigationLink(destination: Devices())  {
-//                            Text("Devices")
-//                        }
-//
-//
-//                        NavigationLink(destination: AppProficiencies())  {
-//                            Text("Proficiencies")
-//                        }
-//
-//                        NavigationLink(destination: AppInfo())  {
-//                            Text("App Info")
-//                        }
-//                        NavigationLink(destination: FAQs())  {
-//                            Text("FAQs")
-//                        }
-//                        NavigationLink(destination: ContactUs())  {
-//                            Text("Contact Us")
-//                        }
+                        NavigationLink(destination: AppInfo())  {
+                            Text("App Info")
+                        }
+                        NavigationLink(destination: FAQs())  {
+                            Text("FAQs")
+                        }
+                        NavigationLink(destination: ContactUs())  {
+                            Text("Contact Us")
+                        }
                     }
                 }
                 .navigationTitle("My Profile")
