@@ -14,65 +14,46 @@ struct HelpVolunteerView: View {
         "Hello" + (appUser.getName(.FirstName).isEmpty ? "": " \(appUser.getName(.FirstName))")
     }
     
+    let screen = screenData()
+    
     var body: some View {
         VStack{
             Text(welcomeMessage)
                 .fontWeight(.medium)
                 .font(.largeTitle)
-        ZStack{
-        
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 350, height: 175)
-                .foregroundColor(.gray)
+            
+            ZStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.gray)
                 
-            VStack{
-            Image(systemName: "globe.americas")
-                .font(.system(size: 100))
-                .foregroundColor(.white)
-                .padding()
-            Text("Helping since")
-                .foregroundColor(.white)
-                .font(.subheadline)
+                VStack{
+                    Image(systemName: "globe.americas")
+                        .font(.system(size: screen.screenHeight*0.1))
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                    Text("Helping Since: \(appUser.dateSignedUp.formatted(date: .long, time: .omitted))")
+                        .foregroundColor(.white)
+                        .font(.body)
+                        .padding(.bottom)
+                }
             }
-        }.padding()
+            .frame(height: screen.screenHeight*0.2)
+            .padding()
+
             Button( action: {
                 print("How to answer a call")
             })  {
-                Text("How to answer a call").fontWeight(.bold)
-                    .frame(width: 320, height: 50)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .font(.title2)
-                    .cornerRadius(10)
-            }.padding()
-        
+                BigButtonView(isLargeButton: false, buttonColor: .blue, buttonText: "How to Answer a Call")
+            }
+            
             HStack{
+                StatView(of: .People)
                 
-            ZStack{
-            RoundedRectangle(cornerRadius: 10, style: .circular)
-                .frame(width: 165, height: 165, alignment: .topLeading)
-                .foregroundColor(.green)
+                Spacer()
                 
-                Text("Users helped \n                                 5").fontWeight(.bold)
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .frame(width: 125, height: 125)
-                
+                StatView(of: .Time)
             }
-            .padding(5)
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10, style: .circular)
-                        .frame(width: 165, height: 165, alignment: .topLeading)
-                        .foregroundColor(.green)
-                        
-                    Text("Time Volunteered \n              1hr 30min").fontWeight(.bold)
-                        .font(.title2)
-                            .foregroundColor(.white)
-                            .frame(width: 125, height: 125)
-                    }
-                .padding(5)
-            }
+            .padding()
         }
     }
 }

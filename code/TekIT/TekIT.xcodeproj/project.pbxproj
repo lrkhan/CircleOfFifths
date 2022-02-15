@@ -13,8 +13,6 @@
 		986F2FE427BABA54009A730C /* HelpUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE327BABA54009A730C /* HelpUserView.swift */; };
 		986F2FE727BABACE009A730C /* CommunityVolunteerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */; };
 		986F2FE927BABAD9009A730C /* CommunityUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE827BABAD9009A730C /* CommunityUserView.swift */; };
-		986F2FEC27BABB39009A730C /* ProfileVolunteerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FEB27BABB39009A730C /* ProfileVolunteerView.swift */; };
-		986F2FEE27BABB48009A730C /* ProfileUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FED27BABB47009A730C /* ProfileUserView.swift */; };
 		989B95EA27AADB6A00179F46 /* TekITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95E927AADB6A00179F46 /* TekITApp.swift */; };
 		989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95EB27AADB6A00179F46 /* ContentView.swift */; };
 		989B95EE27AADB6B00179F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989B95ED27AADB6B00179F46 /* Assets.xcassets */; };
@@ -29,6 +27,8 @@
 		98AF54F827B16A82005A07AD /* UserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AF54F727B16A82005A07AD /* UserTabView.swift */; };
 		98B2C0B827B699EE00DFEFB3 /* AppleIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B2C0B727B699EE00DFEFB3 /* AppleIDView.swift */; };
 		98B2C0BA27B69A0300DFEFB3 /* ScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B2C0B927B69A0300DFEFB3 /* ScreenData.swift */; };
+		98DDA99127BB6020000F47C2 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDA99027BB6020000F47C2 /* NameView.swift */; };
+		98DDA99327BB6D8E000F47C2 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDA99227BB6D8E000F47C2 /* StatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,6 @@
 		986F2FE327BABA54009A730C /* HelpUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUserView.swift; sourceTree = "<group>"; };
 		986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVolunteerView.swift; sourceTree = "<group>"; };
 		986F2FE827BABAD9009A730C /* CommunityUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityUserView.swift; sourceTree = "<group>"; };
-		986F2FEB27BABB39009A730C /* ProfileVolunteerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVolunteerView.swift; sourceTree = "<group>"; };
-		986F2FED27BABB47009A730C /* ProfileUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserView.swift; sourceTree = "<group>"; };
 		989B95E627AADB6A00179F46 /* TekIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989B95E927AADB6A00179F46 /* TekITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekITApp.swift; sourceTree = "<group>"; };
 		989B95EB27AADB6A00179F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +55,8 @@
 		98B2C0B727B699EE00DFEFB3 /* AppleIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIDView.swift; sourceTree = "<group>"; };
 		98B2C0B927B69A0300DFEFB3 /* ScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenData.swift; sourceTree = "<group>"; };
 		98DA61F127AD688F003E8FCE /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
+		98DDA99027BB6020000F47C2 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		98DDA99227BB6D8E000F47C2 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				98AF54F127B16499005A07AD /* ProfileView.swift */,
-				986F2FEB27BABB39009A730C /* ProfileVolunteerView.swift */,
-				986F2FED27BABB47009A730C /* ProfileUserView.swift */,
+				98DDA99027BB6020000F47C2 /* NameView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				989B95F727AAEC8D00179F46 /* BigButtonView.swift */,
+				98DDA99227BB6D8E000F47C2 /* StatView.swift */,
 				98DA61F127AD688F003E8FCE /* CallButtonView.swift */,
 				98B2C0B727B699EE00DFEFB3 /* AppleIDView.swift */,
 			);
@@ -259,10 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98DDA99327BB6D8E000F47C2 /* StatView.swift in Sources */,
 				986F2FE727BABACE009A730C /* CommunityVolunteerView.swift in Sources */,
 				986F2FE427BABA54009A730C /* HelpUserView.swift in Sources */,
+				98DDA99127BB6020000F47C2 /* NameView.swift in Sources */,
 				989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */,
-				986F2FEE27BABB48009A730C /* ProfileUserView.swift in Sources */,
 				98AF54EC27B16461005A07AD /* SignUpView.swift in Sources */,
 				98AF54F227B16499005A07AD /* ProfileView.swift in Sources */,
 				98B2C0B827B699EE00DFEFB3 /* AppleIDView.swift in Sources */,
@@ -272,7 +273,6 @@
 				98AF54F827B16A82005A07AD /* UserTabView.swift in Sources */,
 				986F2FE227BAB992009A730C /* HelpVolunteerView.swift in Sources */,
 				98AF54F427B164A5005A07AD /* CommunityView.swift in Sources */,
-				986F2FEC27BABB39009A730C /* ProfileVolunteerView.swift in Sources */,
 				982A464227B2AA9E00E82F65 /* LogInView.swift in Sources */,
 				98AF54EE27B1646D005A07AD /* HelpView.swift in Sources */,
 				9805F15327AC317A00DCEBCF /* UserData.swift in Sources */,

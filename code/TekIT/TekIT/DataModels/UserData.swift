@@ -20,13 +20,16 @@ class User: ObservableObject, Codable {
     @Published var userRole: Role
     @Published var appProficiencies: [String] = []
     @Published var notSignedIn = true
+    var dateSignedUp = Date.now
+    @Published var peopleHelped: Int = 0
+    @Published var minutesHelped: Int = 0
     
     enum Name{
         case FirstName, LastName, Both
     }
     
     enum CodingKeys: CodingKey {
-        case userID, userName, language, userRole, appProficiencies, notSignedIn, userEmail
+        case userID, userName, userEmail, language, userRole, appProficiencies, notSignedIn, dateSignedUp, peopleHelped, minutesHelped
     }
     
     init(name: [String], role: Role) {
@@ -74,6 +77,9 @@ class User: ObservableObject, Codable {
         try container.encode(language, forKey: .language)
         try container.encode(appProficiencies, forKey: .appProficiencies)
         try container.encode(notSignedIn, forKey: .notSignedIn)
+        try container.encode(dateSignedUp, forKey: .dateSignedUp)
+        try container.encode(peopleHelped, forKey: .peopleHelped)
+        try container.encode(minutesHelped, forKey: .minutesHelped)
     }
     
     required init(from decoder: Decoder) throws {
@@ -86,6 +92,9 @@ class User: ObservableObject, Codable {
         self.language = try container.decode(String.self, forKey: .language)
         self.appProficiencies = try container.decode([String].self, forKey: .appProficiencies)
         self.notSignedIn = try container.decode(Bool.self, forKey: .notSignedIn)
+        self.dateSignedUp = try container.decode(Date.self, forKey: .dateSignedUp)
+        self.peopleHelped = try container.decode(Int.self, forKey: .peopleHelped)
+        self.peopleHelped = try container.decode(Int.self, forKey: .minutesHelped)
     }
     
     func changeID(to userID: String) {
