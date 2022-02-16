@@ -16,5 +16,6 @@ struct RequestSpecificHelpView: View {
 struct RequestSpecificHelpView_Previews: PreviewProvider {
     static var previews: some View {
         RequestSpecificHelpView()
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

@@ -31,5 +31,6 @@ struct UserTabView: View {
 struct UserTabView_Previews: PreviewProvider {
     static var previews: some View {
         UserTabView()
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

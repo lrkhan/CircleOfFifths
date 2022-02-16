@@ -26,5 +26,6 @@ struct HelpView: View {
 struct HelpView_Previews: PreviewProvider {
     static var previews: some View {
         HelpView()
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

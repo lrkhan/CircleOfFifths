@@ -16,5 +16,6 @@ struct test: View {
 struct test_Previews: PreviewProvider {
     static var previews: some View {
         test()
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

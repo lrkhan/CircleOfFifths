@@ -54,5 +54,6 @@ struct LogInView_Previews: PreviewProvider {
         LogInView(userRole: .constant(.User))
             .preferredColorScheme(.light)
             .previewInterfaceOrientation(.portrait)
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

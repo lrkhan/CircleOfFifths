@@ -53,5 +53,6 @@ struct RoleView: View {
 struct RoleView_Previews: PreviewProvider {
     static var previews: some View {
         RoleView(userRole: .constant(.none))
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

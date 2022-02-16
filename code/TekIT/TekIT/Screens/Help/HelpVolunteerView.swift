@@ -61,5 +61,6 @@ struct HelpVolunteerView: View {
 struct Help_VolunteerView_Previews: PreviewProvider {
     static var previews: some View {
         HelpVolunteerView()
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

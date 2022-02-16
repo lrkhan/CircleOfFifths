@@ -23,5 +23,6 @@ struct SignUpView: View {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

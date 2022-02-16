@@ -21,5 +21,6 @@ struct CommunityVolunteerView: View {
 struct CommunityVolunteerView_Previews: PreviewProvider {
     static var previews: some View {
         CommunityVolunteerView()
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }

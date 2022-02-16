@@ -53,5 +53,6 @@ struct NameView: View {
 struct NameView_Previews: PreviewProvider {
     static var previews: some View {
         NameView(firstName: .constant("test"), lastName: .constant("sdfe"))
+            .environmentObject(User(name: ["",""], role: .User))
     }
 }
