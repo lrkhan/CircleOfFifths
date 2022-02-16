@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var appUser: User
-    
+    @State private var tempUser: User = User(name: [], role: .User)
     @State private var firstname = ""
     @State private var lastname = ""
     @State private var shouldSendNewsletter = false
@@ -59,6 +59,24 @@ struct ProfileView: View {
                         Toggle("Send Newsletter", isOn: $shouldSendNewsletter)
                     }
                     Section(header: Text("App Information")) {
+                        HStack{
+                            Spacer()
+                            
+                            Text("Version 0.1.0")
+                            
+                            Spacer()
+                        }
+//                        Button(action:{
+//                            saveUser(appUser)
+//                        }){
+//                            Text("Save")
+//                        }
+//                        Button(action:{
+//                            tempUser = loadUser()
+//                            copyUser(from: tempUser, to: appUser)
+//                        }){
+//                            Text("Load")
+//                        }
 //                        NavigationLink(destination: AppInfo())  {
 //                            Text("App Info")
 //                        }

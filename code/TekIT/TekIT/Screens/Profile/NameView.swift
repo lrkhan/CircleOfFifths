@@ -32,7 +32,9 @@ struct NameView: View {
                     appUser.userName[1] = lastName
                     lastName = ""
                 }
+                saveUser(appUser)
                 saveConfirmation.toggle()
+                copyUser(from: loadUser(), to: appUser)
             }) {
                 HStack{
                     Spacer()

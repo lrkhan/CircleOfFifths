@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RoleView: View {
+    @EnvironmentObject var appUser: User
     @Binding var userRole: Role
     
     @State private var userAlert = false
@@ -23,10 +24,12 @@ struct RoleView: View {
             }
             
             Button(action:{
+                userRole = .User
                 if userRole != .none {
                     userAlert.toggle()
+                    saveUser(appUser)
+                    copyUser(from: loadUser(), to: appUser)
                 }
-                userRole = .User
             }) {
                 BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "I Need Help")
             }
@@ -35,10 +38,12 @@ struct RoleView: View {
                     }
             
             Button(action:{
-                if userRole != .none {
-                    volunteerAlert.toggle()
-                }
                 userRole = .Volunteer
+                if userRole != .none {
+                    userAlert.toggle()
+                    saveUser(appUser)
+                    copyUser(from: loadUser(), to: appUser)
+                }
             }) {
                 BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Volunteer to Help")
             }

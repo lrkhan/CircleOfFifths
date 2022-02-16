@@ -86,7 +86,7 @@ class User: ObservableObject, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         self.userID = try container.decode(String.self, forKey: .userID)
-        self.userName = try container.decode([String].self, forKey: .userName)
+        self.userName = try container.decode([String?].self, forKey: .userName)
         self.userEmail = try container.decode(String.self, forKey: .userEmail)
         self.userRole = try container.decode(Role.self, forKey: .userRole)
         self.language = try container.decode(String.self, forKey: .language)
@@ -94,7 +94,7 @@ class User: ObservableObject, Codable {
         self.notSignedIn = try container.decode(Bool.self, forKey: .notSignedIn)
         self.dateSignedUp = try container.decode(Date.self, forKey: .dateSignedUp)
         self.peopleHelped = try container.decode(Int.self, forKey: .peopleHelped)
-        self.peopleHelped = try container.decode(Int.self, forKey: .minutesHelped)
+        self.minutesHelped = try container.decode(Int.self, forKey: .minutesHelped)
     }
     
     func changeID(to userID: String) {
@@ -111,9 +111,12 @@ func loadUser() -> User {
         let data = try Data(contentsOf: fileURL)
         let userData = try JSONDecoder().decode(User.self, from: data)
         
+        print("Loaded User Successfully")
+        
         return userData
     } catch {
         print("error reading user data")
+        
         return User(name: [], role: .none)
     }
 }
@@ -127,7 +130,27 @@ func saveUser(_ user: User) {
         try JSONEncoder()
             .encode(user)
             .write(to: fileURL)
+        
+        print("Writing complete")
+        
+        return
     } catch {
         print("error writing user data")
+        
+        return
     }
+}
+
+func copyUser(from: User, to: User) {
+    to.notSignedIn = from.notSignedIn
+    to.language = from.language
+    to.userRole = from.userRole
+    to.minutesHelped = from.minutesHelped
+    to.peopleHelped = from.peopleHelped
+    to.dateSignedUp = from.dateSignedUp
+    to.userName = from.userName
+    to.userEmail = from.userEmail
+    to.appProficiencies = from.appProficiencies
+    
+    saveUser(to)
 }

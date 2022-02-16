@@ -32,6 +32,11 @@ struct AppleIDView: View {
                     let lastName = authCred.fullName?.familyName
                     
                     appUser.userName = [firstName, lastName]
+                    
+                    appUser.notSignedIn.toggle()
+                    
+                    saveUser(appUser)
+                    
                     break
                 default:
                     break
