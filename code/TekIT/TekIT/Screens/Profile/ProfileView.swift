@@ -28,7 +28,7 @@ struct ProfileView: View {
                     
                     if appUser.notSignedIn {
                         Section(header: Text("Log In")) {
-                            AppleIDView()
+                            AppleIDView(userRole: $appUser.userRole)
                         }
                     }
                     

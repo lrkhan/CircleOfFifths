@@ -39,7 +39,7 @@ struct LogInView: View {
                 }
             }
             
-            AppleIDView()
+            AppleIDView(userRole: $userRole)
             
             Spacer()
             

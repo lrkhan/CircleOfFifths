@@ -12,6 +12,8 @@ struct AppleIDView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appUser: User
     
+    @Binding var userRole: Role
+    
     var buttonHeight: CGFloat { screenData().buttonHeightApple }
     
     var body: some View {
@@ -35,7 +37,13 @@ struct AppleIDView: View {
                     
                     appUser.notSignedIn.toggle()
                     
+                    if appUser.userRole == .none {
+                        appUser.userRole = userRole
+                    }
+                    
                     saveUser(appUser)
+                    
+                    copyUser(from: loadUser(), to: appUser)
                     
                     break
                 default:
@@ -56,6 +64,6 @@ struct AppleIDView: View {
 
 struct AppleIDView_Previews: PreviewProvider {
     static var previews: some View {
-        AppleIDView()
+        AppleIDView(userRole: .constant(.Volunteer))
     }
 }
