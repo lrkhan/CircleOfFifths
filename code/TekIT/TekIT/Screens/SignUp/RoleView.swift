@@ -40,7 +40,7 @@ struct RoleView: View {
             Button(action:{
                 userRole = .Volunteer
                 if userRole != .none {
-                    userAlert.toggle()
+                    volunteerAlert.toggle()
                     saveUser(appUser)
                     copyUser(from: loadUser(), to: appUser)
                 }
