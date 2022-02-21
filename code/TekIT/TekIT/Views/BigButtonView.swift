@@ -25,10 +25,11 @@ struct BigButtonView: View {
                 .frame(height: isLargeButton ? buttonLarge : buttonSmall)
                 .padding()
             Text(buttonText)
-                .font(.largeTitle)
+                .font(.title)
                 .foregroundColor(Color.white)
-                .frame(width: buttonWidth, height: buttonSmall)
-                .accessibility(label: Text(buttonText))
+                .frame(width: buttonWidth, height: isLargeButton ? buttonLarge : buttonSmall)
+                //.accessibility(label: Text(buttonText))
+                .fixedSize(horizontal: false, vertical: true)
         }
         //.padding()
     }

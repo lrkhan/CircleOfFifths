@@ -32,7 +32,7 @@ struct LogInView: View {
             Group{
                 Button(action:{
                     // need to fit a BLANK user in here
-                    appUser.userName = ["Jane","Doe"]
+                    appUser.userName = ["",""]
                     appUser.userRole = userRole
                 }) {
                     BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Get Started")

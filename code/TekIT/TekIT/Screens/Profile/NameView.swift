@@ -19,9 +19,13 @@ struct NameView: View {
         Form {
             Section(header: Text("First Name")){
                 TextField("\(appUser.getName(.FirstName))", text: $firstName)
+                    .accessibilityLabel("Text Field for first name")
+                    .accessibilityValue("Current Value is: \(appUser.getName(.FirstName).isEmpty ? "blank":appUser.getName(.FirstName))")
             }
             Section(header: Text("Last Name")){
             TextField("\(appUser.getName(.LastName))", text: $lastName)
+                    .accessibilityLabel("Text Field for last name")
+                    .accessibilityValue("Current Value is: \(appUser.getName(.LastName).isEmpty ? "blank":appUser.getName(.LastName))")
             }
             Button(action: {
                 if !firstName.isEmpty {

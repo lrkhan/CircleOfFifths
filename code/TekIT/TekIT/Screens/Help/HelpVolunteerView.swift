@@ -31,10 +31,12 @@ struct HelpVolunteerView: View {
                         .font(.system(size: screen.screenHeight*0.1))
                         .foregroundColor(.white)
                         .padding(.vertical)
+                        .accessibilityHidden(true)
                     Text("Helping Since: \(appUser.dateSignedUp.formatted(date: .long, time: .omitted))")
                         .foregroundColor(.white)
                         .font(.body)
                         .padding(.bottom)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
             .frame(height: screen.screenHeight*0.2)

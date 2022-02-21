@@ -38,11 +38,13 @@ struct ProfileView: View {
                             Text("Name")
                         }
                         
-                        NavigationLink(destination: Text("s")){
+                        NavigationLink(destination: Text("Pronoun Selection Page")){
                             Text("Pronouns")
                         }
                         
-                        Picker(selection: $languageIndex, label: Text("Prefered Language")) {
+                        Picker(selection: $languageIndex, label: Text("Prefered Language (Calls)")
+                                .accessibilityLabel("Prefered Language for Calls")
+                        ) {
                             ForEach(language,id: \.self) {
                                 Text("\($0)")
                             }
@@ -63,7 +65,7 @@ struct ProfileView: View {
                             Spacer()
                             
                             Text("Version 0.1.0")
-                            
+                                .accessibilityHidden(true)
                             Spacer()
                         }
 //                        Button(action:{

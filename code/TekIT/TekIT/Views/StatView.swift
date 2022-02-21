@@ -28,8 +28,9 @@ struct StatView: View {
                 HStack {
                     Text(of.rawValue)
                         .fontWeight(.bold)
-                        .font(.title2)
+                        .font(.headline)
                         .foregroundColor(.white)
+                        .accessibilityValue(dataMessage(for: of))
                     
                     Spacer()
                 }
@@ -40,13 +41,16 @@ struct StatView: View {
                 case .Time:
                     Text("\(appUser.minutesHelped/60)h \(appUser.minutesHelped%60)mm")
                         .fontWeight(.heavy)
-                        .font(.largeTitle)
+                        .font(.title)
                         .foregroundColor(.white)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityHidden(true)
                 case .People:
                     Text("\(appUser.peopleHelped)")
                         .fontWeight(.heavy)
-                        .font(.largeTitle)
+                        .font(.title)
                         .foregroundColor(.white)
+                        .accessibilityHidden(true)
                 }
                     
                 
@@ -54,6 +58,15 @@ struct StatView: View {
                 
             }
             .frame(width: screen.screenWidth*0.38, height: screen.screenWidth*0.38)
+        }
+    }
+    
+    func dataMessage(for dataType: type) -> String {
+        switch dataType {
+        case .Time:
+            return "\(appUser.minutesHelped/60) hours and  \(appUser.minutesHelped%60) minutes"
+        case .People:
+            return "\(appUser.peopleHelped) people helped"
         }
     }
 }
