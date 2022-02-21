@@ -2,14 +2,64 @@
 //  RequestSpecificHelpView.swift
 //  TekIT
 //
-//  Created by Luthfor Khan on 2/7/22.
+//  Created by Juan
 //
 
 import SwiftUI
 
 struct RequestSpecificHelpView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    let standardApps = ["Accessibility","Camera","Settings","Safari","Siri","Mail","Messages","Phone","Facetime","Clock"]
+    
+    let otherApps = ["Facebook","Youtube","Zoom"]
+    
     var body: some View {
-        Text("R Specifc Help")
+        NavigationView{
+            List{
+                Section(header: Text("Standard Apps")) {
+                    //Standard()
+                    
+                    ForEach(standardApps, id: \.self){app in
+                        NavigationLink {
+                            Text("\(app) Call")
+                        } label: {
+                            HStack{
+                                Image(app)
+                                    .resizable()
+                                    .frame(width: 32, height: 32)
+                                Text(app)
+                            }
+                        }
+                    }
+                    
+                }
+                
+                Section(header: Text("External Apps")) {
+                    ForEach(otherApps, id: \.self){app in
+                        NavigationLink {
+                            Text("\(app) Call")
+                        } label: {
+                            HStack{
+                                Image(app)
+                                    .resizable()
+                                    .frame(width: 32, height: 32)
+                                Text(app)
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                
+                
+                Section(header: Text("Other Apps")) {
+                    NavigationLink("Suggest an App", destination: Text("Form for Other App") )
+                }
+                
+            }.navigationTitle("Select App")
+            
+        }
     }
 }
 

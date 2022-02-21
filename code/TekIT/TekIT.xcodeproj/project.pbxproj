@@ -13,6 +13,7 @@
 		986F2FE427BABA54009A730C /* HelpUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE327BABA54009A730C /* HelpUserView.swift */; };
 		986F2FE727BABACE009A730C /* CommunityVolunteerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */; };
 		986F2FE927BABAD9009A730C /* CommunityUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE827BABAD9009A730C /* CommunityUserView.swift */; };
+		98939EFA27C3E58400805795 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98939EF927C3E58400805795 /* LaunchScreen.swift */; };
 		989B95EA27AADB6A00179F46 /* TekITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95E927AADB6A00179F46 /* TekITApp.swift */; };
 		989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B95EB27AADB6A00179F46 /* ContentView.swift */; };
 		989B95EE27AADB6B00179F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989B95ED27AADB6B00179F46 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		986F2FE327BABA54009A730C /* HelpUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUserView.swift; sourceTree = "<group>"; };
 		986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVolunteerView.swift; sourceTree = "<group>"; };
 		986F2FE827BABAD9009A730C /* CommunityUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityUserView.swift; sourceTree = "<group>"; };
+		98939EF927C3E58400805795 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		989B95E627AADB6A00179F46 /* TekIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989B95E927AADB6A00179F46 /* TekITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekITApp.swift; sourceTree = "<group>"; };
 		989B95EB27AADB6A00179F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				986F2FE527BABA8D009A730C /* Help */,
 				986F2FEF27BABB4D009A730C /* Profile */,
 				98AF54EF27B16488005A07AD /* RequestSpecificHelpView.swift */,
+				98939EF927C3E58400805795 /* LaunchScreen.swift */,
 				986F2FF027BABB68009A730C /* SignUp */,
 				98AF54F727B16A82005A07AD /* UserTabView.swift */,
 			);
@@ -266,6 +269,7 @@
 			files = (
 				98DDA99327BB6D8E000F47C2 /* StatView.swift in Sources */,
 				986F2FE727BABACE009A730C /* CommunityVolunteerView.swift in Sources */,
+				98939EFA27C3E58400805795 /* LaunchScreen.swift in Sources */,
 				986F2FE427BABA54009A730C /* HelpUserView.swift in Sources */,
 				98DDA99127BB6020000F47C2 /* NameView.swift in Sources */,
 				989B95EC27AADB6A00179F46 /* ContentView.swift in Sources */,
@@ -414,7 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TekIT/TekIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"TekIT/Preview Content\"";
 				DEVELOPMENT_TEAM = TDL4PT97XP;
 				ENABLE_PREVIEWS = YES;
@@ -444,7 +448,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TekIT/TekIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"TekIT/Preview Content\"";
 				DEVELOPMENT_TEAM = TDL4PT97XP;
 				ENABLE_PREVIEWS = YES;

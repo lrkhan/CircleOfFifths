@@ -10,6 +10,8 @@ import SwiftUI
 struct HelpUserView: View {
     @EnvironmentObject var appUser: User
     
+    @State var apps = false
+    
     private var welcomeMessage: String {
         "Hello" + (appUser.getName(.FirstName).isEmpty ? "": " \(appUser.getName(.FirstName))")
     }
@@ -24,12 +26,14 @@ struct HelpUserView: View {
             }){
                 BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "Call for Help")
             }
+            
             Button(action:{
-                
+                apps.toggle()
             }){
                 BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Select App")
             }
         }
+        .sheet(isPresented: $apps){RequestSpecificHelpView()}
     }
 }
 
