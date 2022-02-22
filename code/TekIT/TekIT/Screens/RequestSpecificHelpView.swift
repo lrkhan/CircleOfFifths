@@ -18,8 +18,6 @@ struct RequestSpecificHelpView: View {
         NavigationView{
             List{
                 Section(header: Text("Standard Apps")) {
-                    //Standard()
-                    
                     ForEach(standardApps, id: \.self){app in
                         NavigationLink {
                             Text("\(app) Call")
@@ -48,10 +46,7 @@ struct RequestSpecificHelpView: View {
                             }
                         }
                     }
-                    
-                    
                 }
-                
                 
                 Section(header: Text("Other Apps")) {
                     NavigationLink("Suggest an App", destination: Text("Form for Other App") )
