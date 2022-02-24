@@ -19,7 +19,7 @@ struct SearchView: View {
                 .padding()
             HStack {
                 Image(systemName: "magnifyingglass")
-                    
+                    .accessibilityHidden(true)
                 TextField("Search", text: $searchBar)
                     .frame(width: screenData().screenWidth * 0.8, height: screenData().screenHeight * 0.06)
             }

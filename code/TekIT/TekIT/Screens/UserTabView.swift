@@ -25,6 +25,10 @@ struct UserTabView: View {
                 Text("Profile")
             }.tag(3)
         }
+        .onAppear() {
+           // UITabBar.appearance().backgroundColor = .black
+            UITabBarAppearance().configureWithOpaqueBackground()
+                }
     }
 }
 

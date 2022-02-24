@@ -99,7 +99,6 @@
 				986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */,
 				986F2FE827BABAD9009A730C /* CommunityUserView.swift */,
 				3ABBB0E027C51E7700DBF9AD /* BackUpView.swift */,
-				3ABBB0E227C546FE00DBF9AD /* videocardView.swift */,
 				983EBB3227C7BFF900946A09 /* SearchView.swift */,
 			);
 			path = Community;
@@ -181,6 +180,7 @@
 				98DDA99227BB6D8E000F47C2 /* StatView.swift */,
 				98DA61F127AD688F003E8FCE /* CallButtonView.swift */,
 				98B2C0B727B699EE00DFEFB3 /* AppleIDView.swift */,
+				3ABBB0E227C546FE00DBF9AD /* videocardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -430,9 +430,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TekIT/TekIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"TekIT/Preview Content\"";
-				DEVELOPMENT_TEAM = 5D5G88JFR9;
+				DEVELOPMENT_TEAM = TDL4PT97XP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TekIT/Info.plist;
@@ -445,7 +445,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.lrkhan.TekIT.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.lrkhan.TekIT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TekIT/TekIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"TekIT/Preview Content\"";
 				DEVELOPMENT_TEAM = TDL4PT97XP;
 				ENABLE_PREVIEWS = YES;

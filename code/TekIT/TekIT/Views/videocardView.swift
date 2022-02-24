@@ -40,7 +40,7 @@ struct videocardView: View {
         }
         .alert("You will be taken to an external video.", isPresented: $showingAlert) {
                     Button("Ok") {openURL(URL(string: link)!)}
-                    Button("Cancel", role: .destructive) { showingAlert = false}
+                    Button("Cancel", role: .cancel) { showingAlert = false}
                 }
         
     }
