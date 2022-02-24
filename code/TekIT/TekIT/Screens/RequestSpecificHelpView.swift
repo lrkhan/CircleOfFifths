@@ -52,7 +52,13 @@ struct RequestSpecificHelpView: View {
                     NavigationLink("Suggest an App", destination: Text("Form for Other App") )
                 }
                 
-            }.navigationTitle("Select App")
+            }
+            .navigationTitle("Select App")
+            .toolbar {
+                Button("Back") {
+                    dismiss()
+                }
+            }
             
         }
     }

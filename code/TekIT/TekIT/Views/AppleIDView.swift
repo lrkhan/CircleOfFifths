@@ -17,6 +17,7 @@ struct AppleIDView: View {
     var buttonHeight: CGFloat { screenData().buttonHeightApple }
     
     var body: some View {
+        
         SignInWithAppleButton(.continue) { request in
             request.requestedScopes = [.email, .fullName]
         } onCompletion: { result in

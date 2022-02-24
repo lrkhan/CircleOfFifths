@@ -10,7 +10,6 @@ import SwiftUI
 struct SignUpView: View {
     @EnvironmentObject var appUser:User
     @State private var userRoleTemp: Role = .none
-    
     var body: some View {
         if userRoleTemp == .none {
             RoleView(userRole: $userRoleTemp)

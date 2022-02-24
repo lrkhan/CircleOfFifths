@@ -24,6 +24,8 @@ class User: ObservableObject, Codable {
     @Published var peopleHelped: Int = 0
     @Published var minutesHelped: Int = 0
     
+    @Published var pageSelection = 2
+    
     enum Name{
         case FirstName, LastName, Both
     }

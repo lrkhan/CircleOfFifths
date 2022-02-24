@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RoleView: View {
     @EnvironmentObject var appUser: User
+    @Environment(\.dismiss) var dismiss
+    
     @Binding var userRole: Role
     
     @State private var userAlert = false
@@ -34,7 +36,10 @@ struct RoleView: View {
                 BigButtonView(isLargeButton: true, buttonColor: .blue, buttonText: "I Need Help")
             }
             .alert("Your Role is Now a User", isPresented: $userAlert) {
-                        Button("OK", role: .cancel) { }
+                        Button("OK", role: .cancel) {
+                            dismiss()
+                            appUser.pageSelection = 2
+                        }
                     }
             
             Button(action:{
@@ -48,7 +53,10 @@ struct RoleView: View {
                 BigButtonView(isLargeButton: false, buttonColor: .green, buttonText: "Volunteer to Help")
             }
             .alert("Your Role is Now a Volunteer", isPresented: $volunteerAlert) {
-                        Button("OK", role: .cancel) { }
+                        Button("OK", role: .cancel) {
+                            dismiss()
+                            appUser.pageSelection = 2
+                        }
                     }
             
         }
