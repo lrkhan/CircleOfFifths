@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ABBB0E127C51E7700DBF9AD /* BackUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBB0E027C51E7700DBF9AD /* BackUpView.swift */; };
+		3ABBB0E327C546FE00DBF9AD /* videocardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBB0E227C546FE00DBF9AD /* videocardView.swift */; };
 		9805F15327AC317A00DCEBCF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805F15227AC317A00DCEBCF /* UserData.swift */; };
 		982A464227B2AA9E00E82F65 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A464127B2AA9E00E82F65 /* LogInView.swift */; };
 		986F2FE227BAB992009A730C /* HelpVolunteerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE127BAB992009A730C /* HelpVolunteerView.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ABBB0E027C51E7700DBF9AD /* BackUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpView.swift; sourceTree = "<group>"; };
+		3ABBB0E227C546FE00DBF9AD /* videocardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videocardView.swift; sourceTree = "<group>"; };
 		9805F15227AC317A00DCEBCF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		982A464127B2AA9E00E82F65 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		986F2FE127BAB992009A730C /* HelpVolunteerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVolunteerView.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				98AF54F327B164A5005A07AD /* CommunityView.swift */,
 				986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */,
 				986F2FE827BABAD9009A730C /* CommunityUserView.swift */,
+				3ABBB0E027C51E7700DBF9AD /* BackUpView.swift */,
+				3ABBB0E227C546FE00DBF9AD /* videocardView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABBB0E127C51E7700DBF9AD /* BackUpView.swift in Sources */,
 				98DDA99327BB6D8E000F47C2 /* StatView.swift in Sources */,
 				986F2FE727BABACE009A730C /* CommunityVolunteerView.swift in Sources */,
 				98939EFA27C3E58400805795 /* LaunchScreen.swift in Sources */,
@@ -276,6 +283,7 @@
 				98AF54EC27B16461005A07AD /* SignUpView.swift in Sources */,
 				98AF54F227B16499005A07AD /* ProfileView.swift in Sources */,
 				98B2C0B827B699EE00DFEFB3 /* AppleIDView.swift in Sources */,
+				3ABBB0E327C546FE00DBF9AD /* videocardView.swift in Sources */,
 				989B95EA27AADB6A00179F46 /* TekITApp.swift in Sources */,
 				98B2C0BA27B69A0300DFEFB3 /* ScreenData.swift in Sources */,
 				98AF54EA27B1644D005A07AD /* RoleView.swift in Sources */,
@@ -420,7 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"TekIT/Preview Content\"";
-				DEVELOPMENT_TEAM = TDL4PT97XP;
+				DEVELOPMENT_TEAM = 5D5G88JFR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TekIT/Info.plist;
@@ -433,7 +441,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.lrkhan.TekIT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.lrkhan.TekIT.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
