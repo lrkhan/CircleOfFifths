@@ -11,6 +11,7 @@
 		3ABBB0E327C546FE00DBF9AD /* videocardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBB0E227C546FE00DBF9AD /* videocardView.swift */; };
 		9805F15327AC317A00DCEBCF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805F15227AC317A00DCEBCF /* UserData.swift */; };
 		982A464227B2AA9E00E82F65 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A464127B2AA9E00E82F65 /* LogInView.swift */; };
+		983EBB3327C7BFF900946A09 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EBB3227C7BFF900946A09 /* SearchView.swift */; };
 		986F2FE227BAB992009A730C /* HelpVolunteerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE127BAB992009A730C /* HelpVolunteerView.swift */; };
 		986F2FE427BABA54009A730C /* HelpUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE327BABA54009A730C /* HelpUserView.swift */; };
 		986F2FE727BABACE009A730C /* CommunityVolunteerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */; };
@@ -40,6 +41,7 @@
 		3ABBB0E227C546FE00DBF9AD /* videocardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videocardView.swift; sourceTree = "<group>"; };
 		9805F15227AC317A00DCEBCF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		982A464127B2AA9E00E82F65 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		983EBB3227C7BFF900946A09 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		986F2FE127BAB992009A730C /* HelpVolunteerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVolunteerView.swift; sourceTree = "<group>"; };
 		986F2FE327BABA54009A730C /* HelpUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpUserView.swift; sourceTree = "<group>"; };
 		986F2FE627BABACE009A730C /* CommunityVolunteerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVolunteerView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				986F2FE827BABAD9009A730C /* CommunityUserView.swift */,
 				3ABBB0E027C51E7700DBF9AD /* BackUpView.swift */,
 				3ABBB0E227C546FE00DBF9AD /* videocardView.swift */,
+				983EBB3227C7BFF900946A09 /* SearchView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				98B2C0BA27B69A0300DFEFB3 /* ScreenData.swift in Sources */,
 				98AF54EA27B1644D005A07AD /* RoleView.swift in Sources */,
 				98AF54F827B16A82005A07AD /* UserTabView.swift in Sources */,
+				983EBB3327C7BFF900946A09 /* SearchView.swift in Sources */,
 				986F2FE227BAB992009A730C /* HelpVolunteerView.swift in Sources */,
 				98DDA99627BC0C2C000F47C2 /* test.swift in Sources */,
 				98AF54F427B164A5005A07AD /* CommunityView.swift in Sources */,

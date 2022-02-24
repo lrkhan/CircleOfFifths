@@ -13,9 +13,9 @@ struct CommunityView: View {
     var body: some View {
         switch appUser.userRole {
         case .User:
-            CommunityUserView()
+            BackUpView()
         case .Volunteer:
-            CommunityVolunteerView()
+            BackUpView()
         case .none:
             VStack{
                 Text("An Error has Occured")

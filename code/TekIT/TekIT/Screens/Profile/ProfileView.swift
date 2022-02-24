@@ -42,7 +42,7 @@ struct ProfileView: View {
                             Text("Pronouns")
                         }
                         
-                        Picker(selection: $languageIndex, label: Text("Prefered Language (Calls)")
+                        Picker(selection: $languageIndex, label: Text("Preferred Language (Calls)")
                                 .accessibilityLabel("Prefered Language for Calls")
                         ) {
                             ForEach(language,id: \.self) {
